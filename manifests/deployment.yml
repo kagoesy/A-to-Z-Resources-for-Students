@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "testclu2-3005"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "testclu2-3005"
+  template:
+    metadata:
+      labels:
+        app: "testclu2-3005"
+    spec:
+      containers:
+        - name: "testclu2-3005"
+          image: "testacr717.azurecr.io/testclu2"
+          ports:
+          - containerPort: 1
