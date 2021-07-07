@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "testclu2-3005"
+    labels:
+        app: "testclu2-3005"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 1
+      targetPort: 1
+      protocol: TCP
+      name: http
+    selector:
+        app: "testclu2-3005"
